@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="untitled.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Folder" representedClassName="PhotoManagement.Folder" syncable="YES">
+        <attribute name="path" optional="YES" attributeType="String" defaultValueString="&quot;&quot;" syncable="YES"/>
+    </entity>
+    <entity name="Library" representedClassName="PhotoManagement.Library" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" syncable="YES"/>
+        <relationship name="settings" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Settings" syncable="YES"/>
+    </entity>
+    <entity name="Photo" representedClassName="PhotoManagement.Photo" syncable="YES">
+        <attribute name="ahash" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="created" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="fhash" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="filename" optional="YES" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <attribute name="filepath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 64" defaultValueString="-1" syncable="YES"/>
+        <attribute name="phash" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Integer 64" defaultValueString="-1" syncable="YES"/>
+    </entity>
+    <entity name="Settings" representedClassName="PhotoManagement.Settings" syncable="YES">
+        <relationship name="imports" optional="YES" toMany="YES" deletionRule="No Action" ordered="YES" destinationEntity="Folder" syncable="YES"/>
+        <relationship name="output" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Folder" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Folder" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="Settings" positionX="-54" positionY="0" width="128" height="73"/>
+        <element name="Photo" positionX="-36" positionY="9" width="128" height="178"/>
+        <element name="Library" positionX="-27" positionY="90" width="128" height="88"/>
+    </elements>
 </model>

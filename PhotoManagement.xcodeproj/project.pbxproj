@@ -13,6 +13,14 @@
 		C53E16451A37EE1A006728C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C53E16441A37EE1A006728C7 /* Images.xcassets */; };
 		C53E16481A37EE1A006728C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53E16461A37EE1A006728C7 /* Main.storyboard */; };
 		C53E16541A37EE1A006728C7 /* PhotoManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53E16531A37EE1A006728C7 /* PhotoManagementTests.swift */; };
+		C53E165E1A37EE89006728C7 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53E165D1A37EE89006728C7 /* PreferencesViewController.swift */; };
+		C53E16601A37EEAA006728C7 /* PhotoHashingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53E165F1A37EEAA006728C7 /* PhotoHashingUtils.swift */; };
+		C53E16621A37EEBD006728C7 /* PhotoOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53E16611A37EEBD006728C7 /* PhotoOperations.swift */; };
+		C53E16701A37F176006728C7 /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53E166F1A37F176006728C7 /* CoreDataStackManager.swift */; };
+		C53E16721A37FE1B006728C7 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53E16711A37FE1B006728C7 /* Folder.swift */; };
+		C53E16741A37FE1C006728C7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53E16731A37FE1C006728C7 /* Photo.swift */; };
+		C53E16761A37FE1D006728C7 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53E16751A37FE1D006728C7 /* Settings.swift */; };
+		C53E16781A37FE1D006728C7 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53E16771A37FE1D006728C7 /* Library.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,14 @@
 		C53E164D1A37EE1A006728C7 /* PhotoManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoManagementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C53E16521A37EE1A006728C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C53E16531A37EE1A006728C7 /* PhotoManagementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManagementTests.swift; sourceTree = "<group>"; };
+		C53E165D1A37EE89006728C7 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		C53E165F1A37EEAA006728C7 /* PhotoHashingUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoHashingUtils.swift; sourceTree = "<group>"; };
+		C53E16611A37EEBD006728C7 /* PhotoOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoOperations.swift; sourceTree = "<group>"; };
+		C53E166F1A37F176006728C7 /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
+		C53E16711A37FE1B006728C7 /* Folder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Folder.swift; path = Models/Folder.swift; sourceTree = "<group>"; };
+		C53E16731A37FE1C006728C7 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = Models/Photo.swift; sourceTree = "<group>"; };
+		C53E16751A37FE1D006728C7 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = Models/Settings.swift; sourceTree = "<group>"; };
+		C53E16771A37FE1D006728C7 /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Library.swift; path = Models/Library.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +94,14 @@
 			isa = PBXGroup;
 			children = (
 				C53E163D1A37EE1A006728C7 /* AppDelegate.swift */,
+				C53E165D1A37EE89006728C7 /* PreferencesViewController.swift */,
+				C53E165F1A37EEAA006728C7 /* PhotoHashingUtils.swift */,
+				C53E16641A37EEDC006728C7 /* Models */,
+				C53E16611A37EEBD006728C7 /* PhotoOperations.swift */,
 				C53E163F1A37EE1A006728C7 /* ViewController.swift */,
 				C53E16441A37EE1A006728C7 /* Images.xcassets */,
 				C53E16461A37EE1A006728C7 /* Main.storyboard */,
-				C53E16411A37EE1A006728C7 /* PhotoManagement.xcdatamodeld */,
+				C53E166F1A37F176006728C7 /* CoreDataStackManager.swift */,
 				C53E163B1A37EE1A006728C7 /* Supporting Files */,
 			);
 			path = PhotoManagement;
@@ -110,6 +130,18 @@
 				C53E16521A37EE1A006728C7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C53E16641A37EEDC006728C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C53E16771A37FE1D006728C7 /* Library.swift */,
+				C53E16751A37FE1D006728C7 /* Settings.swift */,
+				C53E16731A37FE1C006728C7 /* Photo.swift */,
+				C53E16711A37FE1B006728C7 /* Folder.swift */,
+				C53E16411A37EE1A006728C7 /* PhotoManagement.xcdatamodeld */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +244,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C53E16401A37EE1A006728C7 /* ViewController.swift in Sources */,
+				C53E16701A37F176006728C7 /* CoreDataStackManager.swift in Sources */,
 				C53E163E1A37EE1A006728C7 /* AppDelegate.swift in Sources */,
+				C53E16741A37FE1C006728C7 /* Photo.swift in Sources */,
+				C53E16761A37FE1D006728C7 /* Settings.swift in Sources */,
+				C53E16721A37FE1B006728C7 /* Folder.swift in Sources */,
+				C53E16621A37EEBD006728C7 /* PhotoOperations.swift in Sources */,
 				C53E16431A37EE1A006728C7 /* PhotoManagement.xcdatamodeld in Sources */,
+				C53E165E1A37EE89006728C7 /* PreferencesViewController.swift in Sources */,
+				C53E16781A37FE1D006728C7 /* Library.swift in Sources */,
+				C53E16601A37EEAA006728C7 /* PhotoHashingUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +441,7 @@
 				C53E16591A37EE1A006728C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C53E165A1A37EE1A006728C7 /* Build configuration list for PBXNativeTarget "PhotoManagementTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +450,7 @@
 				C53E165C1A37EE1A006728C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
